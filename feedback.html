@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Обратная связь — Food Construct</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class = "main_index" >
+    <header class="main">
+        <h1>Food Construct</h1>
+        <nav>
+            <a href="index.html">О нас</a>
+            <a href="create.html">Собрать ланч</a>
+            <a href="checkout.html">Оформить заказ</a>
+            <a href="index.html">Заказы</a>
+            <a href="#footer">Контакты</a>
+            <a href="feedback.html">Обратная связь</a>
+            <a href="login.html">Войти</a>
+        </nav>
+    </header>
+
+    <main >
+        <div class="feedback">
+            <h2>Форма обратной связи</h2>
+            <form action="https://httpbin.org/post" method="POST" enctype="multipart/form-data">
+                <label >ФИО:<br>
+                    <input class ="input"  name="fullname" required>
+                </label><br>
+
+                <label>Email:<br>
+                    <input class ="input" name="email" required>
+                </label><br>
+
+                <p>Откуда узнали о нас:</p>
+                <label><input type="radio" name="source" value="друзья"> От друзей</label><br>
+                <label><input type="radio" name="source" value="интернет"> Из интернета</label><br>
+                <label><input type="radio" name="source" value="реклама"> Из рекламы</label><br>
+
+                <label>Тип обращения:<br>
+                    <select name="type">
+                        <option value="жалоба">Жалоба</option>
+                        <option value="предложение">Предложение</option>
+                    </select>
+                </label><br>
+
+                <label>Текст сообщения:<br>
+                    <textarea name="message" rows="5" cols="40"></textarea>
+                </label><br>
+
+                <label>Вложение:<br>
+                    <input type="file" name="attachment">
+                </label><br>
+
+                <label><input type="checkbox" name="consent" required> Даю согласие на обработку персональных данных</label><br>
+
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="main" id="footer">
+        <p class="foot">Позвонить нам <a class="foot" href="tel:+70000000000">+7-000-000-00-00</a></p>
+    </footer>
+</body>
+
+</html>
